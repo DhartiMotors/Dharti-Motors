@@ -1,0 +1,11 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>Admin | Dharti Motors</title><meta name="robots" content="noindex,nofollow"><link rel="icon" href="images/logo.png"><link rel="stylesheet" href="css/style.css"></head><body data-admin="1">
+<header><div class="nav"><a class="brand" href="index.html"><img class="logo" src="images/logo.png" alt=""><div class="brand-text">Dharti Motors<span>ADMIN</span></div></a><div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;justify-content:flex-end"><span id="who" class="count"></span><a class="btn btn-navy" id="adm" href="admin.html" hidden>Admin</a><button class="btn btn-navy" id="out" type="button" hidden>Sign out</button><a class="btn btn-primary" href="index.html">View site</a></div></div></header>
+<main><section style="padding:44px 0"><div class="wrap">
+<div id="nocfg" class="no-match" hidden><h3>Not connected yet</h3><p>Add your Apps Script web app URL in <code>js/config.js</code>. See SETUP-GUIDE.md.</p></div>
+<div id="deny" class="no-match" hidden><h3>Admin access only</h3><p>This account is not an admin. <a href="broker.html" style="color:var(--gold-ink);font-weight:700">Go to the broker portal</a></p></div>
+<div id="auth" style="max-width:460px" hidden><form class="card" id="fin"><h3 style="margin-bottom:16px">Admin access</h3><div class="field" style="margin-bottom:14px"><label for="lP">Admin key</label><input id="lP" type="password" required autocomplete="current-password"></div><button class="btn btn-navy" type="submit">Unlock</button><p class="msg" id="lM" role="alert"></p></form></div>
+<div id="app" hidden><div class="tabs" id="tabs"></div><div id="v"></div></div>
+</div></section></main>
+<div class="overlay fm" id="dov" hidden><div class="modal wide" role="dialog" aria-modal="true" aria-label="Car details"><button class="close" id="dclose" type="button" aria-label="Close">✕</button><div id="dbody"></div></div></div>
+<script src="js/config.js"></script><script src="js/api.js"></script><script src="js/shared.js"></script><script src="js/aitests.js"></script><script src="js/portal.js"></script>
+</body></html>

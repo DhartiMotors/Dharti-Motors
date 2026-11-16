@@ -1,0 +1,17 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0B2545">
+<link rel="icon" href="images/logo.png">
+<title>Your sell request | Dharti Motors</title>
+<link rel="stylesheet" href="css/style.css">
+</head><body>
+<header><div class="nav"><a class="brand" href="index.html"><img class="logo" src="images/logo.png" alt=""><div class="brand-text">Dharti Motors<span>PRE-OWNED CARS</span></div></a><a class="btn btn-primary" href="index.html">Back to site</a></div></header>
+<main><section style="padding:40px 0"><div class="wrap" style="max-width:640px"><span class="eyebrow">Your sell request</span><h2 id="st">Checking…</h2><div class="card" id="box" style="margin-top:20px"><p>Please wait…</p></div><p class="note" style="margin-top:14px">Keep this link private. Anyone who has it can see your offer.</p></div></section></main>
+<script src="js/config.js"></script><script src="js/api.js"></script><script src="js/shared.js"></script>
+<script>
+(async()=>{let t=new URLSearchParams(location.search).get("t");if(!t){try{t=JSON.parse(localStorage.getItem("dm_sell")||"{}").t}catch(e){}}
+const r=await sellStatus(t);if(!r){$("st").textContent="Request not found";$("box").innerHTML="<p>This link may be wrong, or the request was removed. Please message us on Instagram.</p>";return}
+const i=sellInfo(r);$("st").textContent=i.title;$("box").innerHTML=`<p><strong>${E(r.car)} (${r.year})</strong></p><p>${E(i.text)}</p><p class="note">Sent on ${new Date(r.created_at).toLocaleDateString("en-IN")}</p>`})();
+</script>
+</body></html>
